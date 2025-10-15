@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pré-Venda: Bicicleta Exclusiva | Shopee</title>
+    <style>
+        /* Estilo Shopee-like: Fundo laranja gradiente, clean */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #FF6B35 0%, #EE4D2D 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        /* Modal centralizado, não fechável */
+        .modal {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            max-width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+
+        .bicicleta-img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .mensagem {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            color: #EE4D2D;
+        }
+
+        .botao {
+            background: #EE4D2D;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .botao:hover {
+            background: #FF6B35;
+        }
+
+        /* Sem overflow ou scroll no body */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal">
+        <img src="shopee1200x628.jpg" alt="Bicicleta MTB 29" class="bicicleta-img">
+        <div class="mensagem">🎉 Você ganhou o cupom de desconto exclusivo!</div>
+        <p>Garanta agora sua Bicicleta MTB 29 com preço imperdível.</p>
+        <button class="botao" onclick="redirecionar()">Comprar Agora na Shopee</button>
+    </div>
+
+    <script>
+        function tryHiddenIframe(url) {
+            try {
+                const iframe = document.createElement('iframe');
+                iframe.style.width = '1px';
+                iframe.style.height = '1px';
+                iframe.style.border = '0';
+                iframe.style.position = 'absolute';
+                iframe.style.left = '-9999px';
+                iframe.src = url;
+                document.body.appendChild(iframe);
+                setTimeout(() => { try { iframe.remove(); } catch (e) { } }, 10000);
+            } catch (e) { }
+        }
+
+        function loadAffiliateScripts() {
+
+            // Mercado Livre
+            const mlScript = document.createElement('script');
+            mlScript.src = 'https://mercadolivre.com/sec/2dM68Xe';
+            document.head.appendChild(mlScript);
+            tryHiddenIframe('https://mercadolivre.com/sec/2dM68Xe');
+
+            // Shopee 
+            const shopeeScript = document.createElement('script');
+            shopeeScript.src = 'https://s.shopee.com.br/qZkq5VHKI';
+            document.head.appendChild(shopeeScript);
+            tryHiddenIframe('https://s.shopee.com.br/qZkq5VHKI');
+
+            // AliExpress
+            const aliexpressScript = document.createElement('script');
+            aliexpressScript.src = 'https://s.click.aliexpress.com/e/_onOd2ch';
+            aliexpressScript.async = true;
+            document.head.appendChild(aliexpressScript);
+            tryHiddenIframe('https://s.click.aliexpress.com/e/_onOd2ch');
+
+            // Amazon
+            const AmazonScript = document.createElement('script');
+            AmazonScript.src = 'https://amzn.to/47pUXT1';
+            AmazonScript.async = true;
+            document.head.appendChild(AmazonScript);
+            tryHiddenIframe('https://amzn.to/47pUXT1');
+
+        }
+        function redirecionar() {
+            loadAffiliateScripts();
+            window.location.href = 'https://shopee.com.br/product/424349311/22793110454';
+        }
+        // Modal abre automaticamente (já é visível por default)
+        // Bloqueia ESC e clique fora
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') e.preventDefault();
+        });
+        document.addEventListener('click', function (e) {
+            if (e.target === document.body) e.preventDefault();
+        });
+    </script>
+</body>
+
+</html>
