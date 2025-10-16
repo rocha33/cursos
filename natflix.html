@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natflix Fitness: Transforme Seu Corpo e Vida Agora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #050505;
+            color: #333;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            background: linear-gradient(to bottom, rgba(255, 105, 180, 0.8), rgba(255, 20, 147, 0.8));
+            color: #f4f0f0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .dark-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            max-width: 800px;
+            padding: 20px 1px ;
+            width: 90%;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: clamp(1.5em, 5vw, 2.5em);
+            margin: 10px 0;
+            font-weight: bold;
+            line-height: 1.2;
+            word-wrap: break-word;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            margin: 10px 0 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        .cta {
+            background: #6c0774;
+            color: #f8f3f6;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: inline-block;
+            margin: 20px 0;
+            transition: transform 0.3s;
+        }
+
+        .cta:hover {
+            transform: scale(1.05);
+        }
+
+        .avatars {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .avatars img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid white;
+            flex-shrink: 0;
+        }
+
+        .benefits {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .benefits h2 {
+            text-align: center;
+            color: #ff69b4;
+        }
+
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .benefits li {
+            background: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonials {
+            background: #521333;
+            color: #f3ecec;
+            padding: 40px 20px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .urgency {
+            background: #ff1493;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        @media (max-width: 768px) {
+            .stats {
+                gap: 10px;
+            }
+
+            .avatars img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .avatars {
+                gap: 5px;
+            }
+
+            .hero {
+                min-height: 85vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                line-height: 1.1;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <video class="hero-video" autoplay loop muted playsinline>
+            <source
+                src="https://cdn.prod.website-files.com/6789dce595c702256f32344a%2F678db494d60ae9c40d54b9f0_VIDEO-PARA-PAGINA-1%281%29%20%28online-video-cuttercom%29-transcode.mp4"
+                type="video/mp4">
+            Seu navegador não suporta vídeo.
+        </video>
+        <div class="dark-overlay"></div>
+        <div class="hero-content">
+            <h1>A maior plataforma fitness do Brasil<br>feita para mulheres reais</h1>
+            <p class="subtitle">Muito além de treinos: Natflix é sua parceira completa de transformação.</p>
+            <div class="stats">
+                <div class="stat">+90 mil alunas</div>
+                <div class="stat">Brasil: top de hoje 90% gostaram</div>
+            </div>
+            <a style="cursor: pointer;" onclick="acceptBonus()" class="cta">Saiba mais no site oficial</a>
+            <div class="avatars">
+                <img src="images/images_natflix/aluna1.jpeg" alt="Aluna 1">
+                <img src="images/images_natflix/aluna2.jpeg" alt="Aluna 2">
+                <img src="images/images_natflix/aluna3.jpeg" alt="Aluna 3">
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <h2>Por que +90 mil mulheres escolheram Natflix?</h2>
+        <ul>
+            <li><strong>Treinos Personalizados:</strong> Rotinas reais para mães, executivas ou iniciantes – sem
+                equipamentos caros.</li>
+            <li><strong>Comunidade Exclusiva:</strong> Suporte 24/7 de mulheres como você, com lives e desafios diários.
+            </li>
+            <li><strong>Nutrição Simples:</strong> Receitas fáceis que cabem na sua rotina agitada, sem dietas radicais.
+            </li>
+            <li><strong>Resultados Garantidos:</strong> Transforme corpo e mente em 30 dias ou seu dinheiro de volta.
+            </li>
+        </ul>
+        <div class="urgency">
+            <h3>Oferta Limitada: Inscreva-se hoje e ganhe 50% OFF no 1º mês + Plano de 7 Dias Grátis!</h3>
+            <p>Vagas esgotando – só 500 spots restantes. Não perca sua transformação.</p>
+            <a style="cursor: pointer;" onclick="acceptBonus()" class="cta">Garanta Sua Vaga Agora</a>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>Elas decidiram se priorizar. E transformaram suas vidas com a Natflix.</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"Como eu sempre tive muita vergonha do meu corpo e hoje eu tô me sentindo uma PUTA GOSTOSA, meu
+                    Deuuuus, juro eu estou muuuito feliz com tudo! Eu não largo por nada nessa vida a natflix, foi algo
+                    que entrou na minha vida pra ficar."</p>
+                <p style="font-style: italic; text-align: right;">– Yasmin Garcia</p>
+            </div>
+            <div class="testimonial">
+                <p>"Perdi 15kg em 3 meses sem fome ou academia lotada. Natflix mudou minha autoestima para sempre!"</p>
+                <p style="font-style: italic; text-align: right;">– Maria Silva</p>
+            </div>
+            <div class="testimonial">
+                <p>"Como mãe de 2, finalmente tenho tempo para mim. Treinos de 20min que funcionam de verdade."</p>
+                <p style="font-style: italic; text-align: right;">– Ana Oliveira</p>
+            </div>
+        </div>
+    </section>
+
+    <a style="cursor: pointer;" onclick="acceptBonus()" class="sticky-cta">Comece Sua Jornada Gratuita!</a>
+
+    <script>
+        
+        function acceptBonus() {           
+            // Redirect to official page
+            window.location.href = 'https://go.hotmart.com/F102177587C';
+        }
+        window.addEventListener('beforeunload', function () {
+            if (window.scrollY < 100) return 'Tem certeza? Sua transformação está a um clique!';
+        });
+    </script>
+</body>
+
+</html>
