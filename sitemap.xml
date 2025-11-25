@@ -2,8 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://evoluaonline.github.io/cursos/fone-ouvido/fones-ate-50-reais.html</loc>
-    <priority>1.00</priority>
+    <loc>https://evoluaonline.github.io/cursos/</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>>https://evoluaonline.github.io/cursos/fone-ouvido/fones-ate-50-reais.html</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
 </urlset>
