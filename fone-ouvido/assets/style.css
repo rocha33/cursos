@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #222;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cta-topo {
+    display: inline-block;
+    margin-top: 15px;
+    background: #ff6b00;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.produto {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+/* ==== IMAGENS RESPONSIVAS E COM TAMANHO PADRONIZADO ==== */
+.foto-produto {
+    width: 100%;                /* ocupa toda a largura do container */
+    max-width: 300px;           /* tamanho máximo bonito no desktop */
+    height: auto;               /* mantém a proporção */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: block;
+    margin: 15px auto;          /* centraliza a imagem */
+}
+
+.produto img {
+    object-fit: contain;        /* garante que a imagem toda apareça sem cortar */
+    background: #fff;           /* fundo branco caso a imagem tenha transparência */
+}
+
+/* Para telas pequenas (celular) deixar a imagem um pouco menor */
+@media (max-width: 480px) {
+    .foto-produto {
+        max-width: 280px;
+    }
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 12px;
+    background: #ff6b00;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn.grande {
+    padding: 18px 24px;
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+}
