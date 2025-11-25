@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://evoluaonline.github.io/cursos/sitemap.xml
